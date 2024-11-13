@@ -54,7 +54,6 @@ const ListType = styled.li`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: #FFFFFF;
     border-radius: 1rem;
     transition: transform 200ms ease, box-shadow 200ms ease, background 200ms ease; /* Adicionando background a transição */
     padding: 1em;
@@ -76,12 +75,17 @@ const ListType = styled.li`
         font-weight: 600;
         color: #fff;
         text-decoration: none;
+        width:100%;
     }
 
     ul {
         padding: 0;
         margin: 0;
         list-style: none;
+    }
+    
+    ul>li{
+        width:100%
     }
 
     .detailsImg {
@@ -254,4 +258,4 @@ const typeStyles = {
     },
 };
 
-export { List, ListType, ItemDetails };
+export { List, ListType, ItemDetails, getTypeStyles };

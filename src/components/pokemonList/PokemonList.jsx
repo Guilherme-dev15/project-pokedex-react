@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import useFetchPokemons from '../../hooks/useFetchPokemons';
 import { Link } from 'react-router-dom';
 import PokemonImage from '../pokemonsDetails/PokemonImage';
@@ -7,7 +7,6 @@ import { styled } from 'styled-components';
 import PokemonType from '../pokemonsDetails/PokemonType';
 import Loading from '../../layout/Loading';
 import useDelayedLoading from '../../hooks/useDelayedLoading';
-import PokemonSearch from '../pokemonSearch/PokemonSearch';
 import useFilterPokemon from "../../hooks/useFilterPokemon";
 import InputSearch from "../pokemonSearch/InputSearch";
 
@@ -19,17 +18,14 @@ const Section = styled.section`
     margin: 2em;
     gap: 1em;
     
-
     img{
+        margin-top: 1em;
         width: 150px;
         transition: .2s;
         &:hover{
             cursor: pointer;
             transform: scale(1.1);
         }
-    }
-    ol{
-        margin-top: 2em;
     }
 `;
 
@@ -55,9 +51,10 @@ const LoadingContainer = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* para centralizar o loading */
+    height: 100vh;
     font-size: 1.5em;
 `;
+
 const PokemonList = () => {
     const [morePokemon, setMorePokemon] = useState(10);
     const [pokemonTypes, setPokemonTypes] = useState({});
@@ -80,6 +77,7 @@ const PokemonList = () => {
         }
     }, [loading, triggerLoading]);
 
+    // Renderização condicional baseada no estado de carregamento
     if (isDelayedLoading || loading) {
         return (
             <LoadingContainer>
@@ -88,6 +86,7 @@ const PokemonList = () => {
         );
     }
 
+    // Caso de erro
     if (error) {
         return (
             <div>
@@ -120,10 +119,9 @@ const PokemonList = () => {
                         return (
                             <ListType key={pokemonId} type={pokemonTypes[pokemonId] || ''}>
                                 <Link to={`/details/${pokemonId}`}>
-                                    
                                     {pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)}
-                                    <PokemonType pokemonId={pokemonId} onTypesFetched={handleTypesFetched} />
                                     <PokemonImage pokemonId={pokemonId} />
+                                    <PokemonType pokemonId={pokemonId} onTypesFetched={handleTypesFetched} />
                                 </Link>
                             </ListType>
                         );
