@@ -4,6 +4,9 @@ import useFetchPokemonsDetails from '../../hooks/useFetchPokemonsDetails';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import StatsCard from './pokemonStatsCard';
+import { PokemonMoves } from './pokemonMoves';
+import { PokemonAbilities } from './PokemonAbilities';
+
 
 const Section = styled.section`
     display: flex;
@@ -12,6 +15,11 @@ const Section = styled.section`
     align-items: center;
     margin: 2em;
     gap: 1em;
+    
+    a{
+    text-decoration: none;
+        color: white;
+    }
 `;
 
 const ContainerDetails = styled.div`
@@ -26,16 +34,11 @@ const ContainerDetails = styled.div`
     }
 `;
 
-const ListMove = styled.ul`  /* changed from div to ul */
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: wrap;
-    list-style-type: none;
-`;
-
 const DivHeader = styled.div`
     display: flex;
+    
+    align-items: center;
+    justify-content: center;
     gap: 1em;
 
     ul {
@@ -71,21 +74,11 @@ const PokemonDetails = () => {
                 </DivHeader>
 
                 <div>
-                    <h3>Lista de habilidades do Pokémon:</h3>
-                    <ul>
-                        {abilities.map((ability) => (
-                            <li key={ability.ability.name}>{ability.ability.name}</li>
-                        ))}
-                    </ul>
+                    <PokemonAbilities abilities={abilities}/>
                 </div>
 
                 <div>
-                    <h3>Lista de movimentos:</h3>
-                    <ListMove>
-                        {moves.map((move) => (
-                            <li key={move.move.name}>{move.move.name}</li>
-                        ))}
-                    </ListMove>
+                    <PokemonMoves moves={moves} />
                 </div>
             </ContainerDetails>
             <Link to="/">Back to List</Link>

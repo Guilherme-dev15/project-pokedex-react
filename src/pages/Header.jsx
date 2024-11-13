@@ -10,6 +10,8 @@ display:flex;
 justify-content: flex-end;
 align-items:center;
 padding: 1em;
+position: sticky;
+top: 0;
 `
 
 export const Header = (() => {

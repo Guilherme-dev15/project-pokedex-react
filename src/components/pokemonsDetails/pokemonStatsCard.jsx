@@ -8,11 +8,10 @@ const List = styled.ul`
     flex-wrap: wrap;
     justify-content: center;
     max-width: 300px;
-    gap: 1em;
     
 `
 
-const StatsCard = ({ id, statValue }) => {
+const StatsCard = ({ id}) => {
     const { pokemonDetails } = useFetchPokemonsDetails(id);
 
     if (!pokemonDetails) {
@@ -22,7 +21,6 @@ const StatsCard = ({ id, statValue }) => {
 
     return (
         <>
-
             <List>
                 {stats.map((stat) =>
                     <li key={stat.stat.name}>
