@@ -3,10 +3,10 @@ import styled from 'styled-components';
 
 // Styled components for better appearance
 const AbilitiesContainer = styled.div`
-display: flex;
-flex-direction: column;
-align-items: center;
-gap: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
 `;
 
 const AbilitiesList = styled.ul`
@@ -20,20 +20,17 @@ const AbilitiesList = styled.ul`
 const AbilityItem = styled.li`
     display: flex;
     flex-direction:
-margin: 0.5em 0;
+    margin: 0.5em 0;
     font-weight: bold;
 
  button {
         background: none;
-        color: white;
         border: 1px solid #cecece;
         width: 200px;
         padding: 0.5em; /* Added padding for better button appearance */
 
         &:hover {
             background: #ffffff4f;
-
-           
         }
 `;
 

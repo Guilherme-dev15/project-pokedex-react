@@ -13,7 +13,7 @@ const Input = styled.input`
     
 `
 const InputSearch = ({ searchPokemon, setSearchPokemon }) => {
-    return (
+    return ( 
         <>
             <Input
                 type="text"

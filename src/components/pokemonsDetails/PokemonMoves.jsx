@@ -25,7 +25,6 @@ const ListMove = styled.ul`
 const Items = styled.li`
     button {
         background: none;
-        color: white;
         border: 1px solid #cecece;
         width: 200px;
         padding: 0.5em; /* Added padding for better button appearance */

@@ -6,6 +6,7 @@ import styled from 'styled-components';
 import StatsCard from './pokemonStatsCard';
 import { PokemonMoves } from './pokemonMoves';
 import { PokemonAbilities } from './PokemonAbilities';
+import PokemonImage from './PokemonImage';
 
 
 const Section = styled.section`
@@ -18,7 +19,6 @@ const Section = styled.section`
     
     a{
     text-decoration: none;
-        color: white;
     }
 `;
 
@@ -30,7 +30,7 @@ const ContainerDetails = styled.div`
     gap: 1em;
 
     img {
-        width: 100px;
+        width: 250px;
     }
 `;
 
@@ -69,12 +69,13 @@ const PokemonDetails = () => {
             <h1>{name.charAt(0).toUpperCase() + name.slice(1)}</h1>
             <ContainerDetails>
                 <DivHeader>
-                    <img src="https://placehold.co/100x100" alt={`${name} sprite`} />
+                    {< img src="https://placehold.co/100x100" alt={`${name} sprite`} /> }
+                    {/*<PokemonImage pokemonId={id} /> */}
                     <StatsCard id={id} />
                 </DivHeader>
 
                 <div>
-                    <PokemonAbilities abilities={abilities}/>
+                    <PokemonAbilities abilities={abilities} />
                 </div>
 
                 <div>

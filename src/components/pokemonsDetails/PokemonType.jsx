@@ -2,8 +2,6 @@ import React, { useEffect } from 'react';
 import useFetchPokemonsDetails from '../../hooks/useFetchPokemonsDetails';
 import styled from 'styled-components';
 import { getTypeStyles } from '../common/StyledList';
-import useFetchTypeColor from '../../hooks/useFetchTypeColor';
-import { useParams } from 'react-router-dom';
 
 const ListType = styled.ul`
     display: flex;
@@ -16,15 +14,37 @@ const Button = styled.button`
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
-    margin-top: 1em;
-    background:  ${({ type }) => getTypeStyles(type).background};
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    background: ${({ type }) => getTypeStyles(type).background};
     color: ${({ type }) => getTypeStyles(type).color};
+    font-weight: bold;
+    text-transform: capitalize;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+
+    &:hover {
+        background: ${({ type }) => getTypeStyles(type).hoverBackground};
+    }
+`;
+
+const LoadingMessage = styled.div`
+    text-align: center;
+    font-size: 1.2em;
+    color: #555;
+    margin-top: 1em;
+`;
+
+const ErrorMessage = styled.div`
+    text-align: center;
+    font-size: 1.2em;
+    color: red;
+    margin-top: 1em;
 `;
 
 const PokemonType = ({ pokemonId, onTypesFetched }) => {
-    const { pokemonDetails, loading, error } = useFetchPokemonsDetails(pokemonId);
-    const { typeColor } = useFetchTypeColor(pokemonId); // Verifique se o id está correto para buscar a cor
+    const { pokemonDetails, loading, error } = useFetchPokemonsDetails(pokemonId); 
     
     useEffect(() => {
         if (pokemonDetails && onTypesFetched) {
@@ -36,19 +56,19 @@ const PokemonType = ({ pokemonId, onTypesFetched }) => {
     }, [pokemonDetails, onTypesFetched, pokemonId]);
 
     if (loading) {
-        return <p>Loading...</p>;
+        return <LoadingMessage>Loading Pokémon types...</LoadingMessage>;
     }
 
     if (error) {
-        return <p>Error: {error}</p>;
+        return <ErrorMessage>Error: {error}</ErrorMessage>;
     }
 
     if (!pokemonDetails || !pokemonDetails.types) {
-        return <p>No types available.</p>; // Mensagem para quando não há tipos
+        return <ErrorMessage>No types available for this Pokémon.</ErrorMessage>;
     }
-
+    
     const { types } = pokemonDetails;
-
+    
     return (
         <ListType>
             {types.map((type) => (

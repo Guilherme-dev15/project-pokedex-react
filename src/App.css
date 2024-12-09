@@ -1,24 +1,27 @@
 /* src/App.css */
 
-
 body.light {
-    background-color: white;
-    color: black;
-  }
-  
-  body.dark {
-    background-color: #161616;
-    color: white;
-  }
-  
+  background-color: white;
+  color: black;
+}
 
-  button {
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    border: none;
-    border-radius: 5px;
-    transition: background-color 0.3s, color 0.3s;
-    color: black;
-  }
+body.dark {
+  background-color: #161616;
+  color: white;
+}
 
+.text {
+  fill: currentColor;
+}
+
+/* Estilos do botão */
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+  background-color: inherit;
+  color: inherit;
+}
