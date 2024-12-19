@@ -23,7 +23,7 @@ const PokemonImage = ({ pokemonId }) => {
     return (
         <div className='detailsImg'>
             {/* <img src={imgPokemonSrc} alt={`${name} sprite`} /> */}
-            <img src="https://placehold.co/400"  />
+            <img src={imgPokemonSrc} alt={`${name} sprite`} />
         </div>
     );
 };

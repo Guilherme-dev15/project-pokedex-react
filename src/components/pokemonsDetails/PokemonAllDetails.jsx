@@ -69,7 +69,7 @@ const PokemonDetails = () => {
             <h1>{name.charAt(0).toUpperCase() + name.slice(1)}</h1>
             <ContainerDetails>
                 <DivHeader>
-                    {< img src="https://placehold.co/100x100" alt={`${name} sprite`} /> }
+                    {<PokemonImage pokemonId={id} />  }
                     {/*<PokemonImage pokemonId={id} /> */}
                     <StatsCard id={id} />
                 </DivHeader>

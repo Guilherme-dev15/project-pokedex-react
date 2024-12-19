@@ -2,6 +2,8 @@
 import { useState, useEffect } from 'react';
 
 const useFetchPokemons = (limit) => {
+
+    
     const [pokemonList, setPokemonList] = useState([]);
     const [allList, setAllList] = useState([]); // Lista completa de Pokémon
     const [loading, setLoading] = useState(true);

@@ -5,7 +5,7 @@ import linkedin from '../assets/linkedin.svg'
 import linkedinWhite from '../assets/linkedinWhite.svg'
 
 
-import Button from '../components/Buttons/button'
+import Button from '../components/Buttons/Button'
 import React, { useContext } from 'react';
 import { ThemeContext } from '../contexts/ThemeToggle';
 import styled from 'styled-components';

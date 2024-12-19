@@ -1,7 +1,7 @@
 // src/components/ThemeToggle.js
 import React, { useContext } from 'react';
 import { ThemeContext } from '../../contexts/ThemeToggle';
-import Button from '../Buttons/button';
+import Button from '../Buttons/Button';
 import moon from '../../assets/moon.svg'
 import sun from '../../assets/sun.svg'
 

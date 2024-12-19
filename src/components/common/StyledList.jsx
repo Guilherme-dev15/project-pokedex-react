@@ -25,7 +25,7 @@ const List = styled.ol`
 /* Dispositivos pequenos (smartphones maiores e pequenos tablets) */
 @media (min-width: 481px) and (max-width: 768px) {
     display: grid;
-    grid-template-columns: repeat(3, auto);
+    grid-template-columns: repeat(2, auto);
 }
 
 /* Dispositivos médios (tablets e telas pequenas de laptops) */
