@@ -43,7 +43,7 @@ const List = styled.ol`
 /* Telas muito grandes (grandes desktops e monitores) */
 @media (min-width: 1441px) {
    display: grid;
-    grid-template-columns: repeat(8, auto);
+    grid-template-columns: repeat(6, auto);
 }
 `;
 

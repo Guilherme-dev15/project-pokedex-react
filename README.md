@@ -19,7 +19,7 @@ A **Pokémon Pokedex** é uma aplicação React que permite consultar informaç�
 
 ## 👀 Preview
 
-![Preview](url-do-seu-gif.gif)
+![Preview]('.\assets\Pokedex-react.gif')
 
 ## 🖥 Como Rodar a Aplicação Localmente
 
