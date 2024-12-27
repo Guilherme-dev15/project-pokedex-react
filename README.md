@@ -14,6 +14,8 @@ A **Pokémon Pokedex** é uma aplicação React que permite consultar informaç�
 - **Exibição de Detalhes**: Ao clicar em um Pokémon, detalhes como nome, habilidades, altura, peso e uma imagem são exibidos.
 - **Modo Escuro/Claro**: O usuário pode alternar entre os modos de tema claro e escuro.
 - **Carregamento Dinâmico**: Os dados dos Pokémon são carregados dinamicamente através de requisições à API.
+- **Busca por Nome**: O usuário pode filtrar os Pokémon digitando o nome na barra de pesquisa, e a lista de Pokémon será atualizada conforme o usuário digita.
+
 
 ## 👀 Preview
 
