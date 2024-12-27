@@ -4,9 +4,8 @@ import Home from '../pages/Home'
 
 const PokemonRoutes = () => {
     return (
-        <Router>
+        <Router basename="/project-pokedex-react">  {/* Adiciona o basename aqui */}
             <Routes>
-
                 <Route path="/details/:id" element={<PokemonAllDetails />} />
                 <Route path="/" element={<Home />} />
             </Routes>
