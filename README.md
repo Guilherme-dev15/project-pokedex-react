@@ -21,31 +21,39 @@ A **Pokémon Pokedex** é uma aplicação React que permite consultar informaç�
 
 ## 🖥 Como Rodar a Aplicação Localmente
 
-1. Clone este repositório:
-   ```bash
+1. **Clone este repositório:**
+
+   ```
    git clone https://github.com/seu-usuario/pokedex-react.git
-Acesse a pasta do projeto:
+   ```
 
-bash
-Copy code
-cd pokedex-react
-Instale as dependências:
+2. **Acesse a pasta do projeto:**
 
-bash
-Copy code
-npm install
-Inicie o servidor de desenvolvimento:
+   ```
+   cd pokedex-react
+   ```
 
-bash
-Copy code
-npm run dev
-Abra o navegador e acesse http://localhost:3000 para visualizar a aplicação.
+3. **Instale as dependências:**
 
-📄 Estrutura do Projeto
+   ```
+   npm install
+   ```
+
+4. **Inicie o servidor de desenvolvimento:**
+
+   ```
+   npm run dev
+   ```
+
+5. **Abra o navegador e acesse [http://localhost:3000](http://localhost:3000) para visualizar a aplicação.**
+
+---
+
+## 📄 Estrutura do Projeto
+
 A estrutura de pastas do projeto é a seguinte:
 
-bash
-Copy code
+```
 /pokedex
   /public
     index.html        # Arquivo HTML principal
@@ -57,4 +65,5 @@ Copy code
     main.jsx          # Ponto de entrada da aplicação
   /tests              # Testes (caso você implemente mais tarde)
   package.json        # Dependências e scripts do projeto
-  vite.config.js      # C
+  vite.config.js      # Configuração do Vite
+```
