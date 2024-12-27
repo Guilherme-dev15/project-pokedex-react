@@ -4,6 +4,7 @@ import path from 'path';
 
 export default defineConfig({
   plugins: [react()],
+  base: './project-pokedex-react', 
   test: {
     include: ['src/__tests__/**/*.{test,spec}.{js,mjs,cjs,ts,mts,cts,jsx,tsx}'], // Caminho dos testes
     exclude: ['**/node_modules/**', '**/dist/**'], // Exclui node_modules e dist
