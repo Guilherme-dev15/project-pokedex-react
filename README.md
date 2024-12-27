@@ -69,3 +69,9 @@ A estrutura de pastas do projeto é a seguinte:
   package.json        # Dependências e scripts do projeto
   vite.config.js      # Configuração do Vite
 ```
+
+## 🌐 Acesse o Projeto
+
+Você pode acessar o projeto diretamente pelo link abaixo:
+
+[🔗 Pokémon Pokedex](https://guilherme-dev15.github.io/project-pokedex-react/)
