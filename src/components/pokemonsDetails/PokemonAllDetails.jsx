@@ -7,7 +7,7 @@ import StatsCard from './pokemonStatsCard';
 import { PokemonMoves } from './pokemonMoves';
 import { PokemonAbilities } from './PokemonAbilities';
 import PokemonImage from './PokemonImage';
-
+import imageBack from '../../assets/back.png';
 
 const Section = styled.section`
     display: flex;
@@ -16,9 +16,23 @@ const Section = styled.section`
     align-items: center;
     margin: 2em;
     gap: 1em;
-    
-    a{
-    text-decoration: none;
+
+    a {
+        text-decoration: none;
+    }
+
+    .link {
+        text-decoration: none;
+        color: rgba(132, 218, 74, 0.7);
+        font-weight: 700;
+        font-size: 18px;
+
+        &:hover {
+            color: rgba(172, 224, 137, 0.7);
+        }
+
+        display: flex; /* Align image and text */
+        align-items: center; /* Center vertically */
     }
 `;
 
@@ -36,7 +50,6 @@ const ContainerDetails = styled.div`
 
 const DivHeader = styled.div`
     display: flex;
-    
     align-items: center;
     justify-content: center;
     gap: 1em;
@@ -69,8 +82,7 @@ const PokemonDetails = () => {
             <h1>{name.charAt(0).toUpperCase() + name.slice(1)}</h1>
             <ContainerDetails>
                 <DivHeader>
-                    {<PokemonImage pokemonId={id} />  }
-                    {/*<PokemonImage pokemonId={id} /> */}
+                    <PokemonImage pokemonId={id} />
                     <StatsCard id={id} />
                 </DivHeader>
 
@@ -82,7 +94,10 @@ const PokemonDetails = () => {
                     <PokemonMoves moves={moves} />
                 </div>
             </ContainerDetails>
-            <Link to="/">Back to List</Link>
+            <Link to="/" className="link">
+                <img src={imageBack} alt="Back" style={{ marginRight: '8px', width: '24px', height: '24px' }} />
+                Back to List
+            </Link>
         </Section>
     );
 };

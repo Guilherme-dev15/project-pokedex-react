@@ -66,6 +66,9 @@ const PokemonList = () => {
     const { loading, error, allList } = useFetchPokemons(morePokemon);
     const { searchPokemon, setSearchPokemon } = useFilterPokemon({ pokemonList: allList });
 
+
+    
+
     const loadMorePokemon = () => {
         setMorePokemon((prev) => prev + 10);
         triggerLoading();

@@ -3,11 +3,13 @@
 body.light {
   background-color: white;
   color: black;
+  text-decoration: none;
 }
 
 body.dark {
   background-color: #161616;
   color: white;
+  text-decoration: none;
 }
 
 .text {
@@ -25,3 +27,4 @@ button {
   background-color: inherit;
   color: inherit;
 }
+
