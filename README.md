@@ -7,7 +7,6 @@ A **Pokémon Pokedex** é uma aplicação React que permite consultar informaç�
 - **React**: Biblioteca JavaScript para a construção da interface.
 - **Vite**: Ferramenta de build rápida e moderna.
 - **Styled Components**: Biblioteca para estilização de componentes em React.
-- **Vitest**: Framework de testes para testes unitários e de integração.
 
 ## ⚙ Funcionalidades
 
